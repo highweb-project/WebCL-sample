@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebCL Image Filter</title>
+<meta name="viewport" content="width=device-width,  user-scalable=no">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+<link href="./button.css" media="screen, handheld" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../common/webcl.js"></script>
+<script type="text/javascript" src="../common/webgl-utils.js"></script>
+<script type="text/javascript" src="FastButton.js"></script>
+<script type="text/javascript" src="Controller.js"></script>
+<script type="text/javascript" src="FilterJS.js"></script>
+<script type="text/javascript" src="FilterCL.js"></script>
+
+</head>
+
+<body onload="init();" onunload="release();" bgcolor="black">
+<div style="position:absolute; left:0px; top:0px;">
+
+    <div style="position:absolute; left:0px; top:0px; visibility:hidden;">
+        <canvas id="inputCanvas"></canvas>
+    </div>
+
+    <div style="position:absolute; left:0px; top:0px; width:4800px;">
+        <canvas id="outputCanvas"></canvas>
+    </div>
+
+    <div id="run"    class="button" style="position:absolute; left: 10px; top:10px; width:100px; height:20px;">xx</div>
+
+    <div id="filter" class="button" style="position:absolute; left:170px; top:10px; width: 80px; height:20px;">xx</div>
+
+    <div id="toggleDevice" class="button" style="position:absolute; left:170px; top:60px; width: 80px; height:20px;">xx</div>
+
+    <div id="msec"   class="button" style="position:absolute; left:310px; top:10px; width:100px; height:20px;">0 fps</div>
+
+</div>
+</body>
+</html>
