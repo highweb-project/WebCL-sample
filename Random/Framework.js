@@ -296,7 +296,7 @@ Framework = (function(){
         readBuffer: function(/* WebCLBuffer */ buffer, /* CLuint */ numBytes, /* ArrayBuffer*/ hostPtr ){
 
             /* Setting default values */
-            var blockingRead = false;
+            var blockingRead = true;
             var bufferOffSet = 0;
 
             this.queue.enqueueReadBuffer(buffer, blockingRead, bufferOffSet, numBytes, hostPtr);
